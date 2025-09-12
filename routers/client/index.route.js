@@ -1,5 +1,5 @@
-const productsRouter= require('./products.router.js')
-const homeRouter= require('./home.router.js')
+const productsRouter= require('./products.route.js')
+const homeRouter= require('./home.route.js')
 
 module.exports = (app)=>{
     

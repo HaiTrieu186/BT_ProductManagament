@@ -1,8 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const route= require('./routers/client/index.router.js');
+const route= require('./routers/client/index.route.js');
 const app = express();
-const port = 3000;
+
+require("dotenv").config();
+const port = process.env.PORT;
 
 
 /// set template engines
