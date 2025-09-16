@@ -9,7 +9,7 @@ module.exports = (app)=>{
     // console.log("Đã vào trang chủ hihi");
     // res.render("client/pages/home/index.pug");
     // })
-    // app.get('/products', async (req, res) => {
+    // app.get('/products', (req, res) => {
     //     res.render("client/pages/products/index.pug");
     // })
     // .......
