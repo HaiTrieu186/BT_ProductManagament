@@ -1,11 +1,13 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const route= require('./routers/client/index.route.js');
 const app = express();
+const database=require("./config/database.js");
 
 require("dotenv").config();
 const port = process.env.PORT;
 
+// Kết nối database (MongoDB)
+database.connect();
 
 /// set template engines
 app.set("views","views");
@@ -16,14 +18,6 @@ app.use(express.static('public'));
 
 // Gọi Route (thay vì ghi thẳng ở file này)
 route(app);
-
-// Thiết lập model và kết nối tới mongo
-mongoose.connect('mongodb://127.0.0.1:27017/products-study-express-b20');
-const Product = mongoose.model('Product', { 
-  title: String,
-  price: Number,
-  thumbnail:String
-});
 
 
 

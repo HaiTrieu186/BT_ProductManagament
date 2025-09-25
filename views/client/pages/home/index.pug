@@ -1,5 +1,6 @@
 extends ../../layouts/default.pug
+include ../../mixins/box-head.pug
 
 //- muốn lấy dc file trong folder static thì "/......" dấu xược tượng trưng cho ../public/, vd "/css/style.css"
 block main 
-    h1(class="test") Trang chủ
+     +box-head("Chào mừng bạn đến với trang chủ")
